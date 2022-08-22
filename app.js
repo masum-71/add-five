@@ -24,6 +24,9 @@ players.addEventListener("click", (e) => {
     if(playerNumber.length <= 5){
       playersName.innerText =
       e.target.previousSibling.previousSibling.firstChild.nextSibling.innerText;
+      const disabled = e.target;
+      disabled.setAttribute('disabled', "")
+      console.log(e.target)
     }else{
       alert(`You can't add more than 5 players`);
       selectedPlayer.removeChild(selectedPlayer.lastChild)
@@ -32,5 +35,11 @@ players.addEventListener("click", (e) => {
 });
 
 calculate.addEventListener("click", () => {
-  playerExpenses.innerText = getInputValue("per-player") * playerName.length;
+  const playerNumber = document.querySelectorAll(".playerName");
+  const perPlayerCost = getInputValue("per-player");
+  if(!isNaN(perPlayerCost)){
+    playerExpenses.innerText = perPlayerCost * playerNumber.length;
+  }else{
+    alert(`Please insert a Number`)
+  }
 });
