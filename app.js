@@ -29,7 +29,7 @@ players.addEventListener("click", (e) => {
 
       //set disabled attribute
       const disabled = e.target;
-      disabled.setAttribute("disabled", "");
+      disabled.setAttribute("disabled", true);
     } else {
       alert(`You can't add more than 5 players`);
       selectedPlayer.removeChild(selectedPlayer.lastChild);

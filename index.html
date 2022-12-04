@@ -56,9 +56,12 @@
       />
     </header>
     <main class="container mx-auto my-10">
-      <div class="grid grid-cols-4 gap-5">
+      <div class="grid md:grid-cols-4 gap-5">
         <div class="col-span-3">
-          <div id="players" class="grid grid-cols-3 gap-4">
+          <div
+            id="players"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
             <div class="border-2 bg-slate-800 rounded-lg">
               <img
                 class="mb-2 min-w-full"
@@ -213,7 +216,8 @@
               <div><p>Coach</p></div>
               <input id="coach" class="w-1/2 text-black" type="text" />
             </div>
-            <button id="calculate-total"
+            <button
+              id="calculate-total"
               class="bg-blue-900 min-w-full py-1 rounded-2xl my-3 hover:bg-white hover:text-black hover:font-bold"
             >
               Calculate Total
